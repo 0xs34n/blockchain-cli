@@ -67,14 +67,7 @@ program
   .alias('o')
   .action((args, callback) => {
     if (args.port) {
-      const server = net.createServer(socket => p2p.accept(socket, (err, connection) => {
-        console.log('CONNECTION IS:', connection);
-        connection.on('data', chunk => {
-          console.log('chunk is', chunk.toString('utf8'))
-        })
-      }));
-      server.listen(args.port[0]);
-      console.log(server)
+      net.createServer(socket => p2p.accept(socket)).listen(args.port[0]);
     }
     callback();
   })

@@ -9,6 +9,11 @@ const MessageType = {
   RESPONSE_BLOCKCHAIN: 2
 }
 
+
+function onIncomingConnection(err, connection) {
+  if (err) console.log(err);
+}
+
 function queryChainLengthMsg() {
   return {
     type: MessageType.QUERY_LATEST
