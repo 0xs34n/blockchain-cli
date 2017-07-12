@@ -1,4 +1,4 @@
-# uNode
+# μNode
 
 ## Features
 - [x] Hash
