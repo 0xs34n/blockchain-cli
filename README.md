@@ -5,8 +5,8 @@
 - [x] Block
 - [x] Blockchain
 - [x] Distributed Network
-- [ ] Transactions
 - [x] Timestamp Server
+- [ ] Transactions
 - [ ] Proof-of-Work
 - [ ] Incentive
 - [ ] Reclaiming Disk Space
