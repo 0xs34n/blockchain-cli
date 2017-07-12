@@ -5,7 +5,8 @@
 - [x] Block
 - [x] Blockchain
 - [x] Distributed Network
-- [x] Timestamp Server
+- [?] Timestamp Server
+- [ ] Persistent Database
 - [ ] Transactions
 - [ ] Proof-of-Work
 - [ ] Incentive
