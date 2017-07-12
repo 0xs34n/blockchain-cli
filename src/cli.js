@@ -44,9 +44,7 @@ program
       const peerIp = args.peer[0].split(":")
       const hostname = peerIp[0];
       const port = peerIp[1];
-      const socket = net.connect(port, hostname, () => p2p.connect(socket, (err, connection) => {
-        connection.write(new Buffer('hey'));
-      }));
+      const socket = net.connect(port, hostname, () => p2p.connect(socket));
     }
     callback();
   })
