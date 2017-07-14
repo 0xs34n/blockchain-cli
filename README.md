@@ -15,3 +15,5 @@
 - [ ] Combining and Splitting Value
 - [ ] Privacy
 - [ ] Calculations
+- [ ] Error handling
+- [ ] Testers

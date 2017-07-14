@@ -3,6 +3,7 @@ const Genesis = require('./GenesisBlock');
 const CryptoJS = require('crypto-js');
 
 function isValidNewBlock(newBlock, previousBlock) {
+  console.log(previousBlock);
   if (previousBlock.index + 1 !== newBlock.index) {
     console.log('invalid index');
     return false;
@@ -17,27 +18,11 @@ function isValidNewBlock(newBlock, previousBlock) {
   return true;
 }
 
-function isValidChain(blockchainToValidate) {
-  if (JSON.stringify(blockchainToValidate[0]) !== JSON.stringify(getGenesisBlock())) {
-    return false;
-  }
-  const tempBlocks = [blockchainToValidate[0]];
-  for (let i = 0; i < blockchainToValidate.length; i++) {
-    if(isValidNewBlock(blockchainToValidate[i], tempBlocks[i - 1])) {
-      tempBlocks.push(blockchainToValidate[i]);
-    } else {
-      return false;
-    }
-  }
-}
-
-
 function calculateHashForBlock(block) {
   return CryptoJS.SHA256(block.index + block.previousHash + block.timestamp + block.data).toString()
 }
 
 
 module.exports = {
-  isValidChain: isValidChain,
   isValidNewBlock: isValidNewBlock
 };

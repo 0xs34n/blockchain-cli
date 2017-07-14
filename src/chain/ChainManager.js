@@ -1,12 +1,12 @@
 const CryptoJS = require("crypto-js");
 const GenesisBlock = require('../block/GenesisBlock.js');
-const Validator = require('../block/BlockValidator.js');
+let Blockchain = './Blockchain.js';
 const Block = require('../block/Block.js');
-const BlockValidator = require('../block/BlockValidator.js');
+const isValidNewBlock = require('../block/BlockValidator.js').isValidNewBlock;
 
 
 function addBlock(newBlock, blockchain) {
-  if (BlockValidator.isValidNewBlock(newBlock, getLatestBlock(blockchain))) {
+  if (isValidNewBlock(newBlock, getLatestBlock(blockchain))) {
     blockchain.push(newBlock);
   }
 }
@@ -23,14 +23,36 @@ function generateNextBlock(blockData, blockchain) {
   return new Block(nextIndex, previousBlock.hash, nextTimestamp, blockData, nextHash);
 }
 
-function replaceChain(newBlocks) {
+function replaceChain(newBlocks, blockchain, responseLatestMsg, broadcast) {
+  console.log('length is longer ===>', newBlocks.length > blockchain.length);
+  console.log('isvalidchain ====>', isValidChain(newBlocks));
   if (isValidChain(newBlocks) && newBlocks.length > blockchain.length) {
     console.log('Received blockchain is valid. Replacing current blockchain with received blockchain');
-    broadcast(responseLatestMsg());
-    return newBlocks;
+    newBlocks.forEach((newBlock, index) => {
+      blockchain[index] = newBlock
+    })
+    broadcast(JSON.stringify(responseLatestMsg(blockchain)));
   } else {
     console.log('Received blockchain invalid!')
   }
+}
+
+function isValidChain(blockchainToValidate) {
+  if (JSON.stringify(blockchainToValidate[0]) !== JSON.stringify(GenesisBlock)) {
+    return false;
+  }
+  const tempBlocks = [blockchainToValidate[0]];
+  for (let i = 1; i < blockchainToValidate.length; i++) {
+    console.log(tempBlocks[i - 1]);
+    console.log(tempBlocks);
+    console.log(blockchainToValidate[i]);
+    if(isValidNewBlock(blockchainToValidate[i], tempBlocks[i - 1])) {
+      tempBlocks.push(blockchainToValidate[i]);
+    } else {
+      return false;
+    }
+  }
+  return true;
 }
 
 function calculateHash(index, previousHash, timestamp, data) {
@@ -40,5 +62,6 @@ function calculateHash(index, previousHash, timestamp, data) {
 module.exports = {
   addBlock: addBlock,
   generateNextBlock: generateNextBlock,
-  getLatestBlock: getLatestBlock
+  getLatestBlock: getLatestBlock,
+  replaceChain: replaceChain
 };

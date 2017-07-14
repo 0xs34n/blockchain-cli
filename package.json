@@ -4,18 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node main.js",
-    "node1": "P2P_PORT=6001 node p2pServer.js",
-    "node2": "P2P_PORT=6002 PEER_PORT=6001 node p2pServer.js",
-    "node3": "P2P_PORT=6003 node p2pServer.js"
+    "start": "./src/cli.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "crypto-js": "^3.1.9-1",
+    "figlet": "^1.2.0",
     "peer-exchange": "^2.2.0",
     "vorpal": "^1.12.0",
+    "vorpal-log": "^1.1.0",
     "wrtc": "0.0.62"
   }
 }

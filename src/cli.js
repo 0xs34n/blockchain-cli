@@ -1,28 +1,44 @@
 #!/usr/bin/env node --harmony
 
 const program = require('vorpal')();
+const figlet = require('figlet');
 const Blockchain = require('./chain/Blockchain.js');
 const ChainManager = require('./chain/ChainManager');
 const net = require('net');
-const p2p = require('./p2p.js');
+const p2p = require('./p2p.js').p2p;
+const broadcast = require('./p2p.js').broadcast;
+const responseLatestMsg = require('./p2p.js').responseLatestMsg;
+const queryChainLengthMsg = require('./p2p.js').queryChainLengthMsg;
+const onData = require('./p2p.js').onData;
+const addPeer = require('./p2p.js').addPeer;
+
+program.log(figlet.textSync('uNode', {
+    font: 'Big',
+    horizontalLayout: 'default',
+    verticalLayout: 'default'
+}));
+
+program
+  .delimiter('μNode →')
+  .show()
 
 program
   .command('blockchain', 'blockchain output')
   .alias('bc')
   .action((args, callback) => {
-    console.log(Blockchain);
+    program.log(Blockchain);
     callback();
   })
 
 program
   .command('mine [data...]', 'mine a new block')
   .alias('m')
-  .action((args, callback) => {
+  .action(function(args, callback) {
     if (args.data) {
       const newBlock = ChainManager.generateNextBlock(args.data, Blockchain);
       ChainManager.addBlock(newBlock, Blockchain);
-      broadcast(responseLatestMsg());
-      console.log(`Successfully added ${args.data} to the blockchain`);
+      broadcast(JSON.stringify(responseLatestMsg(Blockchain)))
+      program.log(`Successfully added ${args.data} to the blockchain`);
     }
     callback();
   })
@@ -30,21 +46,25 @@ program
 program
   .command('peers', 'connected peers')
   .alias('p')
-  .action((args, callback) => {
-    console.log(p2p.peers);
+  .action(function(args, callback) {
+    program.log(peers);
     callback();
   })
 
 program
   .command('connect [peer...]', "connect to a new peer")
   .alias('c')
-  .action((args, callback) => {
-    console.log(args);
+  .action(function(args, callback) {
     if (args.peer) {
       const peerIp = args.peer[0].split(":")
       const hostname = peerIp[0];
       const port = peerIp[1];
-      const socket = net.connect(port, hostname, () => p2p.connect(socket));
+      const socket = net.connect(port, hostname, () => p2p.connect(socket, (err, connection) => {
+        program.log(`Successfully connect to new peer ${args.peer[0]}.`);
+        onData(err, connection, Blockchain);
+        addPeer(connection);
+        connection.write(JSON.stringify(queryChainLengthMsg()));
+      }));
     }
     callback();
   })
@@ -52,10 +72,10 @@ program
 program
   .command("discover")
   .alias('d')
-  .action((args, callback) => {
+  .action(function(args, callback) {
     p2p.getNewPeer((err) => {
       if (err) {
-        console.log(err);
+        program.log(err);
       }
     })
   })
@@ -63,15 +83,17 @@ program
 program
   .command('open [port...]', 'Open port to accept incoming connections')
   .alias('o')
-  .action((args, callback) => {
+  .action(function(args, callback) {
     if (args.port) {
-      net.createServer(socket => p2p.accept(socket)).listen(args.port[0]);
+      net.createServer(function(socket) {
+        p2p.accept(socket, function(err, connection) {
+          program.log('Accepted new incoming peer.');
+          onData(err, connection, Blockchain);
+          addPeer(connection);
+        })
+      }).listen(args.port[0]);
     }
     callback();
   })
 
-program
-  .delimiter('uNode')
-  .show();
-
-
+module.exports = program;
