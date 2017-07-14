@@ -3,7 +3,8 @@
 const program = require('vorpal')();
 const figlet = require('figlet');
 const Blockchain = require('./chain/Blockchain.js');
-const ChainManager = require('./chain/ChainManager');
+const generateNextBlock = require('./chain/ChainManager').generateNextBlock;
+const addBlock = require('./chain/ChainManager').addBlock;
 const net = require('net');
 const p2p = require('./p2p.js').p2p;
 const broadcast = require('./p2p.js').broadcast;
@@ -12,14 +13,14 @@ const queryChainLengthMsg = require('./p2p.js').queryChainLengthMsg;
 const onData = require('./p2p.js').onData;
 const addPeer = require('./p2p.js').addPeer;
 
-program.log(figlet.textSync('uNode', {
+program.log(figlet.textSync('Blockchain.js', {
     font: 'Big',
     horizontalLayout: 'default',
     verticalLayout: 'default'
 }));
 
 program
-  .delimiter('μNode →')
+  .delimiter('Blockchain.js →')
   .show()
 
 program
@@ -35,8 +36,8 @@ program
   .alias('m')
   .action(function(args, callback) {
     if (args.data) {
-      const newBlock = ChainManager.generateNextBlock(args.data, Blockchain);
-      ChainManager.addBlock(newBlock, Blockchain);
+      const newBlock = generateNextBlock(args.data, Blockchain);
+      addBlock(newBlock, Blockchain);
       broadcast(JSON.stringify(responseLatestMsg(Blockchain)))
       program.log(`Successfully added ${args.data} to the blockchain`);
     }
@@ -70,7 +71,7 @@ program
   })
 
 program
-  .command("discover")
+  .command("discover", "discover new peers from your current network")
   .alias('d')
   .action(function(args, callback) {
     p2p.getNewPeer((err) => {
