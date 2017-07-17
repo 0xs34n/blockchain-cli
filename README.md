@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href=""><img src="https://raw.githubusercontent.com/seanseany/blockchain.js/master/img/logo.png" alt="blockchain.js" width="200"></a>
+  <a href=""><img src="https://raw.githubusercontent.com/seanseany/blockchain.js/master/img/logo.png?token=AHErP6Pc7Nmh9hCXaxM6TzOquFW1-8v3ks5Zdk5GwA%3D%3D" width="200"></a>
   <br>
   blockchain.js
   <br>
