@@ -1,6 +1,6 @@
 {
-  "name": "blockchain",
-  "version": "1.0.0",
+  "name": "blockchain.js",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,8 +8,8 @@
     "test": "NODE_ENV=test ava --verbose"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Sean Han",
+  "license": "Apache 2.0",
   "dependencies": {
     "cli-spinners": "^1.0.0",
     "crypto-js": "^3.1.9-1",
