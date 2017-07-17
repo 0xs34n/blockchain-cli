@@ -1,4 +1,4 @@
-# μNode
+# blockchain.js
 
 ## Features
 - [x] Hash
