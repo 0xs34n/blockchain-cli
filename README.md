@@ -15,7 +15,7 @@
 </p>
 <br>
 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/img/markdownify.gif)
+![screenshot](https://raw.githubusercontent.com/seanseany/blockchain.js/master/img/demo.gif?token=AHErPzDYYgcElDoIS7l5eECL7Pf6iZMNks5Zdq9SwA%3D%3D)
 
 ## Getting Started
 
