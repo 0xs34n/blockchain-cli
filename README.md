@@ -15,6 +15,8 @@
 </p>
 <br>
 
+![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/img/markdownify.gif)
+
 ## Getting Started
 
 `npm install -g blockchain.js`

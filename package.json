@@ -1,6 +1,6 @@
 {
   "name": "blockchain.js",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "A blockchain command-line interface built with JavaScript.",
   "main": "index.js",
   "scripts": {
@@ -12,6 +12,10 @@
   },
   "keywords": [],
   "author": "Sean Han",
+  "repository": { 
+    "type" : "git",
+    "url" : "https://github.com/seanseany/blockchain.js"
+  },
   "license": "Apache-2.0",
   "dependencies": {
     "cli-spinners": "^1.0.0",
