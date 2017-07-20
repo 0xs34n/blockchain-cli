@@ -24,16 +24,18 @@
 - ✅ Block integrity validation.
 - 📡 Peer-to-peer communication.
 
-## Getting Started
+
+
+## Installation
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/amitmerchant1990/electron-markdownify
+$ git clone https://github.com/seanseany/blockchain.js
 
 # Go into the repository
-$ cd electron-markdownify
+$ cd blockchain.js
 
 # Install dependencies
 $ npm install
@@ -114,7 +116,7 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the Apache-2.0 License - see the [LICENSE.txt](LICENSE.txt) file for details
 
 ## Acknowledgments
 
