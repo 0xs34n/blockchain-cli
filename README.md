@@ -18,17 +18,29 @@
 ![screenshot](https://raw.githubusercontent.com/seanseany/blockchain.js/master/img/demo.gif?token=AHErPzDYYgcElDoIS7l5eECL7Pf6iZMNks5Zdq9SwA%3D%3D)
 
 ## Features
-- 🔗 Blocks with index, hash, data, and timestamp.
+- 💎 Blocks with index, hash, data, and timestamp.
 - ⛏ Proof-of-work system.
 - ⛓ In-memory JavaScript array to store the blockchain.
-- 🆗 Block integrity validation.
+- ✅ Block integrity validation.
 - 📡 Peer-to-peer communication.
 
 ## Getting Started
 
-`npm install -g blockchain.js`
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
-`blockchain`
+```bash
+# Clone this repository
+$ git clone https://github.com/amitmerchant1990/electron-markdownify
+
+# Go into the repository
+$ cd electron-markdownify
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm start
+```
 
 ### Prerequisites
 
