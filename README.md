@@ -22,7 +22,7 @@
 - ⛏ Proof-of-work system.
 - ⛓ In-memory JavaScript array to store the blockchain.
 - 🆗 Block integrity validation.
-- ↔️ Peer-to-peer communication.
+- 📡 Peer-to-peer communication.
 
 ## Getting Started
 
