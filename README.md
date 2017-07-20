@@ -65,7 +65,8 @@ This project is licensed under the Apache-2.0 License - see the [LICENSE.txt](LI
 
 ## 🙏 Acknowledgments
 
-* Project inspired by [this article](https://medium.com/@lhartikk/a-blockchain-in-200-lines-of-code-963cc1cc0e54) written by Lauri Hartikka. [Repo](https://github.com/lhartikk/naivechain)
-* Antony Jone's [repository](https://github.com/antony/naivechain) for refactoring.
-* Nick Fallon [repository](https://github.com/nickfallon/naivechain) for PoW implementation.
+* [This article](https://medium.com/@lhartikk/a-blockchain-in-200-lines-of-code-963cc1cc0e54) written by Lauri Hartikka.
+* Original [repo](https://github.com/lhartikk/naivechain) by Lauri Hartikka
+* Antony Jone's [fork](https://github.com/antony/naivechain) for refactoring.
+* Nick Fallon [fork](https://github.com/nickfallon/naivechain) for PoW implementation.
 * Logo designed by Muammark / Freepik.
