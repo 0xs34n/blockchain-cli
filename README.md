@@ -17,6 +17,13 @@
 
 ![screenshot](https://raw.githubusercontent.com/seanseany/blockchain.js/master/img/demo.gif?token=AHErPzDYYgcElDoIS7l5eECL7Pf6iZMNks5Zdq9SwA%3D%3D)
 
+## Features
+- 🔗 Blocks with index, hash, data, and timestamp.
+- ⛏ Proof-of-work system.
+- ⛓ In-memory JavaScript array to store the blockchain.
+- 🆗 Block integrity validation.
+- ↔️ Peer-to-peer communication.
+
 ## Getting Started
 
 `npm install -g blockchain.js`
