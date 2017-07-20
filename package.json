@@ -1,6 +1,6 @@
 {
   "name": "blockchain.js",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "A blockchain command-line interface built with JavaScript.",
   "main": "index.js",
   "scripts": {
