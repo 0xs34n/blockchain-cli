@@ -74,7 +74,7 @@ This project is licensed under the Apache-2.0 License - see the [LICENSE.txt](LI
 
 ## ℹ️ FAQ 
 
-Written by [/u/sheepiroth](https://www.reddit.com/r/javascript/comments/6ohc9h/a_blockchain_commandline_interface_built_with/dkiahix/)
+by [/u/sheepiroth](https://www.reddit.com/r/javascript/comments/6ohc9h/a_blockchain_commandline_interface_built_with/dkiahix/)
 
 #### When or why I would use this?
 
