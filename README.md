@@ -9,8 +9,11 @@
 
 <p align="center">
   <a href="https://badge.fury.io/js/blockchain.js">
-    <img src="https://badge.fury.io/js/blockchain.js.svg"
-         alt="Gitter">
+    <img src="https://badge.fury.io/js/blockchain.js.svg" alt="Gitter">
+  </a>
+
+  <a href="https://www.npmjs.com/package/blockchain.js">
+      <img src="https://img.shields.io/npm/dt/blockchain.js.svg" alt="Gitter">
   </a>
 </p>
 <br>
