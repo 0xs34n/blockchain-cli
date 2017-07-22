@@ -4,7 +4,7 @@
   "description": "A blockchain command-line interface built with JavaScript.",
   "main": "index.js",
   "scripts": {
-    "start": "./main.js",
+    "start": "node ./main.js",
     "test": "NODE_ENV=test ava --verbose"
   },
   "bin": {
