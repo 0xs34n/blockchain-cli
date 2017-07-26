@@ -38,7 +38,7 @@ To install this application, you'll need [Node.js](https://nodejs.org/en/downloa
 #### NPM
 
 ```bash
-$ npm install blockchain.js -g
+$ npm install blockchain-cli -g
 $ blockchain
 ```
 
@@ -48,10 +48,10 @@ You'll need [Git](https://git-scm.com) to run the project from source. From your
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/seanseany/blockchain.js
+$ git clone https://github.com/seanseany/blockchain-cli
 
 # Go into the repository
-$ cd blockchain.js
+$ cd blockchain-cli
 
 # Install dependencies
 $ npm install
