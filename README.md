@@ -2,6 +2,9 @@
 <h1 align="center">
   <br>
   <a href="https://github.com/seanseany/blockchain.js/"><img src="https://raw.githubusercontent.com/seanseany/blockchain.js/master/img/logo.png" width="300"></a>
+  <br>
+    Blockchain CLI
+  <br>
 </h1>
 
 
@@ -65,7 +68,7 @@ $ npm start
 
 ## 🎫 License
 
-This project is licensed under the Apache-2.0 License - see the [LICENSE.txt](LICENSE.txt) file for details
+This project is licensed under the Apache-2.0 License - see the [LICENSE](LICENSE) file for details
 
 ## 🙏 Acknowledgments
 
