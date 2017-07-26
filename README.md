@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <a href="https://github.com/seanseany/blockchain.js/"><img src="https://raw.githubusercontent.com/seanseany/blockchain-cli/master/img/logo.png" width="300"></a>
+  <a href="https://github.com/seanseany/blockchain.js/"><img src="https://raw.githubusercontent.com/seanseany/blockchain-cli/master/img/logo.png" width="200"></a>
   <br>
     Blockchain CLI
   <br>
