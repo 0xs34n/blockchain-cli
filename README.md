@@ -1,4 +1,4 @@
-> ‼️ ## The Blockchain CLI has been relocated to [this]() repository.
+> ‼️ Blockchain CLI has been relocated to [this](https://github.com/seanseany/blockchain-cli) repository.
 
 <h1 align="center">
   <br>
