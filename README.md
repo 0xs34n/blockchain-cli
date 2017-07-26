@@ -1,7 +1,4 @@
-
-## ‼️ Attention
-
-> The Blockchain CLI has been relocated to [this]() repository.
+> ‼️ ## The Blockchain CLI has been relocated to [this]() repository.
 
 <h1 align="center">
   <br>
