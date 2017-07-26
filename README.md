@@ -5,7 +5,7 @@
 </h1>
 
 
-<h4 align="center">A blockchain command-line interface built with JavaScript.</h4>
+<h4 align="center">A command-line interface that show how blockchains work.</h4>
 
 <p align="center">
   <a href="https://badge.fury.io/js/blockchain.js">
@@ -74,10 +74,9 @@ This project is licensed under the Apache-2.0 License - see the [LICENSE.txt](LI
 * Antony Jone's [fork](https://github.com/antony/naivechain) for refactoring.
 * Nick Fallon [fork](https://github.com/nickfallon/naivechain) for PoW implementation.
 * Logo designed by Muammark / Freepik.
+* FAQ by [/u/sheepiroth](https://www.reddit.com/r/javascript/comments/6ohc9h/a_blockchain_commandline_interface_built_with/dkiahix/)
 
 ## ℹ️ FAQ 
-
-by [/u/sheepiroth](https://www.reddit.com/r/javascript/comments/6ohc9h/a_blockchain_commandline_interface_built_with/dkiahix/)
 
 #### When or why I would use this?
 
