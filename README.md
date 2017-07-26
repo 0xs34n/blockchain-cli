@@ -15,9 +15,9 @@
     <img src="https://badge.fury.io/js/blockchain-cli.svg" alt="Gitter">
   </a>
 
-  <a href="https://www.npmjs.com/package/blockchain-cli">
+  <!--<a href="https://www.npmjs.com/package/blockchain-cli">
       <img src="https://img.shields.io/npm/dt/blockchain-cli.svg" alt="Gitter">
-  </a>
+  </a>-->
 </p>
 <br>
 
