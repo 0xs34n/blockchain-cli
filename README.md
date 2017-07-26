@@ -5,7 +5,7 @@
 </h1>
 
 
-<h4 align="center">A command-line interface that show the blockchain in action.</h4>
+<h4 align="center">A command-line interface that shows the blockchain in action.</h4>
 
 <p align="center">
   <a href="https://badge.fury.io/js/blockchain.js">
