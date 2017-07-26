@@ -59,7 +59,7 @@ $ npm start
 
 ## ⚒️ Built With
 
-* [Varpol](https://github.com/dthree/vorpal) - Interactive node CLI
+* [Vorpal](https://github.com/dthree/vorpal) - Interactive node CLI
 * [Peer Exchange](https://github.com/mappum/peer-exchange/) - Peer to peer communication
 * [Crypto-js](https://github.com/brix/crypto-js) - Crypto library for hashing blocks
 
