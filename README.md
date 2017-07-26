@@ -1,27 +1,27 @@
 
 <h1 align="center">
   <br>
-  <a href="https://github.com/seanseany/blockchain.js/"><img src="https://raw.githubusercontent.com/seanseany/blockchain.js/master/img/logo.png" width="300"></a>
+  <a href="https://github.com/seanseany/blockchain.js/"><img src="https://raw.githubusercontent.com/seanseany/blockchain-cli/master/img/logo.png" width="300"></a>
   <br>
     Blockchain CLI
   <br>
 </h1>
 
 
-<h4 align="center">A command-line interface that shows the blockchain in action.</h4>
+<h4 align="center">A command-line interface that demonstrates the blockchain.</h4>
 
 <p align="center">
-  <a href="https://badge.fury.io/js/blockchain.js">
-    <img src="https://badge.fury.io/js/blockchain.js.svg" alt="Gitter">
+  <a href="https://badge.fury.io/js/blockchain-cli">
+    <img src="https://badge.fury.io/js/blockchain-cli.svg" alt="Gitter">
   </a>
 
-  <a href="https://www.npmjs.com/package/blockchain.js">
-      <img src="https://img.shields.io/npm/dt/blockchain.js.svg" alt="Gitter">
+  <a href="https://www.npmjs.com/package/blockchain-cli">
+      <img src="https://img.shields.io/npm/dt/blockchain-cli.svg" alt="Gitter">
   </a>
 </p>
 <br>
 
-![screenshot](https://raw.githubusercontent.com/seanseany/blockchain.js/master/img/demo.gif?token=AHErPzDYYgcElDoIS7l5eECL7Pf6iZMNks5Zdq9SwA%3D%3D)
+![screenshot](https://raw.githubusercontent.com/seanseany/blockchain-cli/master/img/demo.gif)
 
 ## 🎉 Features
 - 💎 Blocks with index, hash, data, and timestamp.
