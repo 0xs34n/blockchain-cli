@@ -8,7 +8,7 @@
 </h1>
 
 
-<h4 align="center">A command-line interface of a blockchain.</h4>
+<h4 align="center">A minimal blockchain command-line interface</h4>
 
 <p align="center">
   <a href="https://badge.fury.io/js/blockchain-cli">
