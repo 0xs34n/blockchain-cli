@@ -35,13 +35,6 @@
 
 To install this application, you'll need [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
-#### NPM
-
-```bash
-$ npm install blockchain-cli -g
-$ blockchain
-```
-
 #### Source
 
 You'll need [Git](https://git-scm.com) to run the project from source. From your command line:
